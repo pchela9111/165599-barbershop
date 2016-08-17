@@ -3,6 +3,7 @@ body {
     line-height: 24px;
     font-family: "PT Sans Narrow", "Arial", sans-serif;
     font-weight: 700;
+    text-transform: uppercase;
     color: #000000;
 }
 h1 {
@@ -12,4 +13,329 @@ h1 {
 h2 {
     font-size: 24px;
     line-height: 30px;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+    /* Только для оформления сетки */
+    min-height: 70px;
+}
+
+/* для шапки */
+.main-header {
+    margin-bottom: 50px;
+}
+.main-navigation {
+    float: left;
+    width: 780px;
+    /* Только для оформления сетки */
+    min-height: 70px;
+}
+.index-logo {
+    width: 111px;
+    height: 24px;
+     /* Только для оформления сетки */
+    background-color: aqua;
+}
+.main-navigation .main-menu {
+     display: inline;
+    list-style: none;
+    }
+.main-menu li,
+.breadcrumbs li {
+    display: inline;
+}
+.user-block {
+    float: right;
+    width: 140px;
+    /* Только для оформления сетки */
+    min-height: 70px;
+}
+
+/* хлебные крошки */
+.inner-navigation {
+    width: 615px;
+    /* Только для оформления сетки */
+    min-height: 70px;
+    margin-bottom: 55px;
+}
+.inner-navigation .main-title {
+    margin-bottom: 15px;
+}
+.inner-navigation .breadcrumbs {
+    list-style: none;
+}
+
+/* для catalog.html */
+.filter {
+    float: left;
+    width: 220px;
+    /* Только для оформления сетки */
+    min-height: 595px;
+}
+.catalog {
+    float: right;
+    width: 700px;
+}
+.item-catalog {
+    display: inline-block;
+    width: 220px;
+    min-height: 285px;
+    margin-right: 17px;
+    margin-bottom: 20px;
+    vertical-align: top;
+}
+.item-catalog:nth-child(3n) {
+    margin-right: 0;
+}
+.item-catalog .catalog-title {
+    font-size: 14px;
+    line-height: 18px;
+}
+.paginator {
+    display: inline-block;
+    width: 193px;
+    min-height: 43px;
+    margin-left: 240px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+/* для catalog-item.html */
+.set-demo {
+    float: left;
+    width: 460px;
+    min-height: 670px;
+}
+.main-image {
+    width: 460px;
+    min-height: 499px;
+    margin-bottom: 15px;
+}
+.set-demo .small-image {
+    float: left;
+    margin-right: 20px;
+}
+.small-image:last-of-type {
+    margin: 0;
+}
+.set-info {
+    float: right;
+    width: 390px;
+    /* Только для оформления сетки */
+    min-height: 530px;
+}
+.set-info .presence {
+    display: block;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 18px;
+}
+.presence .article {
+  padding-left: 175px;
+}
+.set-buy {
+    width: 210px;
+    min-height: 42px;
+    margin-top: 35px;
+    margin-bottom: 65px;
+}
+.set-list h2 {
+    margin-bottom: 25px;
+}
+
+/* для price.html */
+.about {
+     /* Только для оформления сетки */
+    min-height: 530px;
+    margin-bottom: 80px;
+}
+.slogan-title {
+    display: inline-block;
+    width: 940px;
+    margin-bottom: 55px;
+    text-align: center;
+    font-size: 48px;
+}
+.content-left {
+    float: left;
+    width: 380px;
+}
+.content-right {
+    float: right;
+    width: 460px;
+}
+.about-title {
+     width: 240px;
+    margin-bottom: 35px;
+}
+.content-right .about-title {
+    width: 180px;
+}
+
+/* для футера */
+.main-footer {
+    margin-top: 45px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.footer-contacts {
+    float: left;
+    width: 320px;
+    margin-right: 60px;
+    /* Только для оформления сетки */
+    min-height: 90px;
+}
+.footer-social {
+    float: left;
+    width: 180px;
+    /* Только для оформления сетки */
+    min-height: 90px;
+}
+.footer-copyright {
+    float: right;
+    width: 180px;
+    /* Только для оформления сетки */
+    min-height: 90px;
+}
+
+/*======================================
+ Системное оформление - не изменять
+=======================================*/
+
+body {
+    padding: 3px;
+}
+body > *,
+body > * > *,
+body > * > * > *,
+body > * > *> * > * {
+    position: relative;
+}
+body > *::before,
+body > * > *::before,
+body > * > * > *::before,
+body > * > *> * > *::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    padding: 2px 5px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Courier New", monotype;
+    white-space: nowrap;
+}
+body > *::before {
+    top: -3px;
+    left: -3px;
+}
+body > * > *::before {
+    top: -3px;
+    left: -3px;
+}
+body > * > * > *::before {
+    top: 0;
+    left: 0;
+}
+body > * {
+    background: rgba(0, 128, 0, 0.2);
+    box-shadow: 0 0 0 3px green;
+}
+body > *::before {
+    color: white;
+    background: green;
+}
+body > * > * {
+    background: rgba(255, 45, 82, 0.2);
+    box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+body > * > *::before {
+    color: white;
+    background: rgb(255, 45, 82);
+}
+body > * > * > * {
+    background: rgba(234, 255, 45, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+body > * > * > *::before {
+    color: black;
+    background: rgb(234, 255, 45);
+}
+body > * > *> * > * {
+    background: rgba(234, 255, 45, 0.2);
+    box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+}
+.main-header::before {
+    content: ".main-header";
+}
+.container::before {
+    content: ".container";
+}
+.main-header .container::before {
+    top: auto;
+    bottom: -28px;
+}
+.main-navigation::before {
+    content: ".main-navigation";
+}
+.user-block::before {
+    content: ".user-block";
+}
+.index-logo::before {
+    content: ".index-logo";
+}
+.inner-navigation::before {
+    content: ".inner-navigation";
+}
+.filter::before {
+    content: ".filter";
+}
+.catalog::before {
+    content: ".catalog";
+}
+.item-catalog::before {
+    content: ".item-catalog";
+}
+.paginator::before {
+    content: ".paginator";
+}
+.main-footer::before {
+    content: ".main-footer";
+}
+.main-footer .container::before {
+    top: -28px;
+}
+.footer-contacts::before {
+    content: ".footer-contacts";
+}
+.footer-social::before {
+    content: ".footer-social";
+}
+.footer-copyright::before {
+    content: ".footer-copyright";
+}
+.set-demo::before {
+    content: ".set-demo";
+}
+.set-info::before {
+    content: ".set-info";
+}
+.about::before {
+    content: ".about";
+}
+.slogan-title::before {
+    content: ".slogan-title";
+}
+.content-left::before {
+    content: ".content-left";
+}
+.content-right::before {
+    content: ".content-right";
 }
