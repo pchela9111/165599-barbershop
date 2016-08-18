@@ -82,13 +82,15 @@ h2 {
 .catalog {
     float: right;
     width: 700px;
+    font-size: 0;
 }
 .item-catalog {
     display: inline-block;
     width: 220px;
     min-height: 285px;
-    margin-right: 17px;
+    margin-right: 20px;
     margin-bottom: 20px;
+    font-size: 14px;
     vertical-align: top;
 }
 .item-catalog:nth-child(3n) {
@@ -102,7 +104,6 @@ h2 {
     display: inline-block;
     width: 193px;
     min-height: 43px;
-    margin-left: 240px;
     margin-top: 25px;
     margin-bottom: 5px;
 }
